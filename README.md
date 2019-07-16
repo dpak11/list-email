@@ -45,4 +45,4 @@ In case you encounter a CORS error in your browser console window, you will have
 
 - Try a different browser. (Firefox might work).
 
-- Copy the JSON data from "name.json" and store it in an object variable (inside tester.js file). Remove the fetch api call to "name.json"
+- Copy the JSON data from "names.json" and assign it to an object variable in tester.js file. Now you do not need the Fetch api call to "names.json"
