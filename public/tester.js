@@ -76,7 +76,15 @@ function generateRandomEmail(names, nicks, gender) {
 }
 
 async function generateIndianList() {
-    const namelist = await fetch("names.json").catch(e => console.log("............." + e));
+    const namelist = await fetch("names.json").catch((err) => {
+            console.log(err);
+            if(window.location.href.indexOf("http") == 0){
+                alert("JSON file missing or invalid");
+            }else{
+                alert("URL scheme must be 'http' or 'https' for CORS request. Try running from a Node server.")
+            }
+            
+        });
     const indian = await namelist.json();
     let indFemaleList = generateRandomEmail(window.atob(indian.fem_names).split(", "), window.atob(indian.fem_nick).split(", "), "female");
     let indMaleList = generateRandomEmail(window.atob(indian.male_names).split(", "), window.atob(indian.male_nick).split(", "), "male");
