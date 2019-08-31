@@ -61,7 +61,7 @@ npm install
 After installation is complete, run the command,
 
 ```
-node main.js
+node main
 ```
 
 Finally, open your browser and go to "http://localhost:3000/"

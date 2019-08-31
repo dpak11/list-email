@@ -4,71 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Node Express</title>
-    <style>
-        p{
-    		display: inline-block;
-			border-right: solid 2px gray;
-			padding: 5px;
-			background-color: rgba(69, 182, 166, 0.5);
-			margin: 0 5px 13px 0;
-			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
-			transition-property: background-color;
-			transition-duration: 1.5s;
-			 -webkit-user-select: none;
-	        -moz-user-select: none;
-	        -ms-user-select: none;
-	        -o-user-select: none;
-	        user-select: none; 
-    	}
-    	p span:nth-child(3) {
-    		background-color: #568eb3;
-			padding: 2px 5px;
-			color: #fff;
-    	}
-    	p span:nth-child(2) {
-		    margin-left: 22px;
-		}
-    	p.showup{    		
-    		animation-name: block-appear;
-	        animation-duration: .8s;
-	        transition-timing-function: ease-out;
-    	}
-    	p:hover{
-			background-color: yellow
-    	}
-    	select{
-    		padding: 12px
-    	}
-    	#results{
-    		margin-top: 20px;
-    	}
-    	.ind-marker{
-	    	position: absolute;
-			padding: 10px 4px;
-			height: 10px;
-			background: #3a5eac96;
-			margin: -4px -6px;
-			font-size: .6em;
-			text-transform: uppercase;
-			border-radius: 3px;
-			letter-spacing: 1px;
-			writing-mode: sideways-lr;
-    	}
-	
-
-		@keyframes block-appear {
-		    0% {
-		        opacity: .5;
-		        transform: translateX(30px);
-		    }
-
-		    100% {
-		        opacity: 1;
-		        transform: translateX(0px);
-		    }
-		}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -91,7 +27,7 @@
 	</div>
 	<div id="results"></div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
-    <script type="text/javascript" src="tester.js"></script>
+    <script type="text/javascript" src="list.js"></script>
 </body>
 
 </html>
