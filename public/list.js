@@ -61,7 +61,6 @@ function shuffleList(items){
         let extracted = items.splice(getRandom(items.length),1);
         newList.push(extracted[0]);
     }
-    console.log(newList);
     return newList;
 }
 function generateRandomEmail(names, nicks, gender) {
@@ -127,7 +126,6 @@ async function fetchList() {
         let _status = statusList[getRandom(statusList.length)];
         _status = (_status == "Widow" && data.gender == "male") ? "Widower" : _status;
         _status = (_status == "Single Mother" && data.gender == "male") ? "Single Father" : _status;
-        console.log(data.email);
         return {
             status: _status,
             email: data.email,

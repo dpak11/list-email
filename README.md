@@ -9,20 +9,20 @@
 - array filter().
 
 
-# Here is the code execution sequence
+### Code execution sequence
 
 
-1) First, call "async fetchList" function. This function will load a random list of email addresses of non-indians from this api "https://jsonplaceholder.typicode.com/comments" using "await fetch()" and stores it in an array.
+1) async "fetchList" function is called. This function will load a random list of email addresses of non-indians from this api "https://jsonplaceholder.typicode.com/comments" using "await fetch()" and stores it in an array.
 
-2) Next, filter() through the above array to extract email addresses ending with "gmail.com, hotmail.com, msn.com, yahoo.com, rediffmail.com, aol.com". If in case this array length is too short(<5) then show the entire list without filtering, and then modify all email addresses by inserting "@gmail.com" at the end.
+2) filter() through the above array to extract email addresses ending with "gmail.com, hotmail.com, msn.com, yahoo.com, rediffmail.com, aol.com". If length of this filtered array length is too short(<5) then show the entire list without filtering, and then modify all email addresses by inserting "@gmail.com" at the end.
 
 3) Call "async generateIndianList" function to:
 
-	- Load a list of Indian names from a JSON file using await fetch(). This list contains base64 encoded string of names and nicknames. So convert it to readable string using window.atob()
+	- Load a list of Indian names from a JSON file using "await fetch()". This is a base64 encoded list of string containing names and nicknames. Convert this to readable string.
 
-	- Split the 'names' and 'nicknames' string and store it in seperate arrays.
+	- Store the 'names' and 'nicknames' string in seperate arrays.
 
-	- use map() to loop through the names array and create email addresses that is a combination of Names, random numbers and nick names.
+	- Loop through the names array using map() and create unique email addresses that is a combination of Names, random numbers and nick names.
 
 	- return a new object that contains the above randomly generated email addresses, gender, IsIndian (boolean)
 
